@@ -1,0 +1,40 @@
+{
+  "ALIASES": {
+    "SIZE": {
+      "b": ["b", "B", "byte", "BYTE", "Byte", "bytes", "BYTES", "Bytes"],
+      "kb": ["kb", "KB", "Kb", "kilo", "KILO", "Kilo", "kilobyte", "KILOBYTE", "Kilobyte", "kilobytes", "KILOBYTES", "Kilobytes", "kib", "KIB", "Kib"],
+      "mb": ["mb", "MB", "Mb", "mega", "MEGA", "Mega", "megabyte", "MEGABYTE", "Megabyte", "megabytes", "MEGABYTES", "Megabytes", "mib", "MIB", "Mib"],
+      "gb": ["gb", "GB", "Gb", "giga", "GIGA", "Giga", "gigabyte", "GIGABYTE", "Gigabyte", "gigabytes", "GIGABYTES", "Gigabytes", "gib", "GIB", "Gib"],
+      "tb": ["tb", "TB", "Tb", "tera", "TERA", "Tera", "terabyte", "TERABYTE", "Terabyte", "terabytes", "TERABYTES", "Terabytes", "tib", "TIB", "Tib"],
+      "pb": ["pb", "PB", "Pb", "peta", "PETA", "Peta", "petabyte", "PETABYTE", "Petabyte", "petabytes", "PETABYTES", "Petabytes", "pib", "PIB", "Pib"]
+    },
+    "AGE": {
+      "s": ["s", "S", "sec", "SEC", "Sec", "second", "SECOND", "Second", "seconds", "SECONDS", "Seconds"],
+      "m": ["m", "M", "min", "MIN", "Min", "minute", "MINUTE", "Minute", "minutes", "MINUTES", "Minutes"],
+      "h": ["h", "H", "hr", "HR", "Hr", "hour", "HOUR", "Hour", "hours", "HOURS", "Hours"],
+      "d": ["d", "D", "day", "DAY", "Day", "days", "DAYS", "Days"],
+      "w": ["w", "W", "week", "WEEK", "Week", "weeks", "WEEKS", "Weeks"],
+      "mo": ["mo", "MO", "Mo", "mon", "MON", "Mon", "month", "MONTH", "Month", "months", "MONTHS", "Months"],
+      "y": ["y", "Y", "yr", "YR", "Yr", "year", "YEAR", "Year", "years", "YEARS", "Years"]
+    }
+  },
+  "MULTIPLIERS": {
+    "SIZE": {
+      "b": 1,
+      "kb": 1024,
+      "mb": 1048576,
+      "gb": 1073741824,
+      "tb": 1099511627776,
+      "pb": 1125899906842624
+    },
+    "AGE": {
+      "s": 1,
+      "m": 60,
+      "h": 3600,
+      "d": 86400,
+      "w": 604800,
+      "mo": 2592000,
+      "y": 31536000
+    }
+  }
+}
