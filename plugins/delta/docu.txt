@@ -1,0 +1,7 @@
+[00-02] - MAGIC_NUMBER    : "FHR" (3 Bytes)
+[03-04] - CHUNK_SIZE_MB   : Raw chunk size in MB (8, 16, 25, 64...) (2 Bytes)
+[05-16] - FILE_SIZE       : Total File Size (96-bit Unsigned Integer) (12 Bytes)
+[17-48] - PATH_HASH       : Relative Path Hash (32 Bytes Raw/Hex)
+[49-63] - RESERVED_SPACE  : Future Padding / Hash Type ID (15 Bytes)
+----------------------------------------------------------------------
+[64-END] - CHUNK_HASHES   : Sequence of SHA-256 Hashes (32 Bytes each)

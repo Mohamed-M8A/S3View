@@ -1,0 +1,32 @@
+{
+  "plugin_id": "bucket_purge_mod",
+  "version": "1.0.0",
+  "view": {
+    "syntax_color": "#ff5555",
+    "hint": "PURGE_BUCKET \"old-bucket\";",
+    "description": "Force-deletes a bucket, including every version and delete marker inside it."
+  },
+  "triggers": [
+    {
+      "group_name": "Removal",
+      "keywords": [
+        "PURGE_BUCKET", "Purge_Bucket", "purge_bucket",
+        "REMOVE_BUCKET", "Remove_Bucket", "remove_bucket",
+        "DELETE_BUCKET", "Delete_Bucket", "delete_bucket"
+      ],
+      "behavior_flags": {}
+    }
+  ],
+  "behavior": {
+    "action_name": "bucket_purge",
+    "supports_simulation": true,
+    "requires_dst": false,
+    "auto_relpath": false,
+    "allowed_protocols": ["SINGLE"],
+    "parser_method": "parse_unary"
+  },
+  "reporting": {
+    "exec_status": "PURGED",
+    "sim_status": "WILL PURGE"
+  }
+}

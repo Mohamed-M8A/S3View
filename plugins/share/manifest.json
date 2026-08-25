@@ -1,0 +1,36 @@
+{
+  "view": {
+    "syntax_color": "#00e5ff",
+    "hint": "SHARE (expires: 3600) \"s3://my-bucket/presentation.pdf\" ;",
+    "description": "Generates temporary, secure HTTP links for S3 objects that can be shared with external users without granting public bucket access."
+  },
+  "plugin_id": "share_mod",
+  "version": "1.1.0",
+  "triggers": [
+    {
+      "group_name": "S3 Public Sharing",
+      "keywords": [
+        "SHARE",
+        "Share",
+        "share",
+        "LINK",
+        "Link",
+        "link"
+      ]
+    }
+  ],
+  "behavior": {
+    "action_name": "share",
+    "supports_simulation": true,
+    "requires_dst": false,
+    "auto_relpath": false,
+    "allowed_protocols": [
+      "SINGLE"
+    ],
+    "parser_method": "parse_unary"
+  },
+  "reporting": {
+    "exec_status": "SHARED",
+    "sim_status": "WILL SHARE"
+  }
+}
