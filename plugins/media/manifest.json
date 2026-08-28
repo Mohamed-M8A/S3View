@@ -1,0 +1,78 @@
+{
+  "view": {
+    "syntax_color": "#ff79c6",
+    "hint": "WEBP (level: 80) [where size > 1MB] \"images/\" to \"optimized/\" ;",
+    "description": "Advanced image processor that converts and compresses files to WEBP, JPEG, PNG, or ICO formats with custom quality levels."
+  },
+  "plugin_id": "media_mod",
+  "version": "1.4.0",
+  "triggers": [
+    {
+      "group_name": "WebP Engine",
+      "keywords": [
+        "WEBP",
+        "Webp",
+        "webp"
+      ],
+      "behavior_flags": {
+        "target_format": "WEBP",
+        "target_extension": "webp"
+      }
+    },
+    {
+      "group_name": "JPEG Engine",
+      "keywords": [
+        "JPEG",
+        "Jpeg",
+        "jpeg",
+        "JPG",
+        "jpg"
+      ],
+      "behavior_flags": {
+        "target_format": "JPEG",
+        "target_extension": "jpg"
+      }
+    },
+    {
+      "group_name": "PNG Engine",
+      "keywords": [
+        "PNG",
+        "Png",
+        "png"
+      ],
+      "behavior_flags": {
+        "target_format": "PNG",
+        "target_extension": "png"
+      }
+    },
+    {
+      "group_name": "ICO Engine",
+      "keywords": [
+        "ICO",
+        "Ico",
+        "ico"
+      ],
+      "behavior_flags": {
+        "target_format": "ICO",
+        "target_extension": "ico"
+      }
+    }
+  ],
+  "behavior": {
+    "action_name": "media",
+    "supports_simulation": true,
+    "requires_dst": false,
+    "auto_relpath": true,
+    "allowed_protocols": [
+      "S2S",
+      "S2L",
+      "L2S",
+      "L2L"
+    ],
+    "parser_method": "parse_flexible"
+  },
+  "reporting": {
+    "exec_status": "CONVERTED",
+    "sim_status": "WILL CONVERT"
+  }
+}
