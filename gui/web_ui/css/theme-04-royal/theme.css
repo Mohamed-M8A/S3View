@@ -1,0 +1,7 @@
+/* Structural sections - imports MUST come first, before any other rule,
+   or browsers silently drop them per the CSS spec */
+@import url("base-layout.css");
+@import url("components.css");
+@import url("splash.css");
+/* Palette - the ONLY part that differs between themes */
+:root{--bg-black:#000;--bg-dark:#070508;--bg-header:#09070a;--border:#1c1620;--text-primary:#fff;--text-secondary:#6b636e;--accent:#a855f7;--accent-rgb:168,85,247;--on-accent:#000;--success:#00ff99;--error:#ff3333;--font-mono:'Consolas','Monaco',monospace}
