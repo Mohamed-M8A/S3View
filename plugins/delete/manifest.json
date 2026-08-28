@@ -1,0 +1,41 @@
+{
+  "view": {
+    "syntax_color": "#ff3333",
+    "hint": "DELETE [where size > 100MB] \"path/\" !\"exclusions\" ;",
+    "description": "Permanently deletes files from S3 or Local storage with safety filtering."
+  },
+  "plugin_id": "delete_mod",
+  "version": "1.1.0",
+  "triggers": [
+    {
+      "group_name": "Delete Command",
+      "keywords": [
+        "DELETE",
+        "Delete",
+        "delete",
+        "PURGE",
+        "Purge",
+        "purge",
+        "REMOVE",
+        "Remove",
+        "remove",
+        "rm"
+      ],
+      "behavior_flags": {}
+    }
+  ],
+  "behavior": {
+    "action_name": "delete",
+    "supports_simulation": true,
+    "requires_dst": false,
+    "auto_relpath": false,
+    "allowed_protocols": [
+      "SINGLE"
+    ],
+    "parser_method": "parse_unary"
+  },
+  "reporting": {
+    "exec_status": "DELETED",
+    "sim_status": "WILL DELETE"
+  }
+}

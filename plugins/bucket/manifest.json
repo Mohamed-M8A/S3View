@@ -1,0 +1,50 @@
+{
+  "plugin_id": "bucket_mod",
+  "version": "1.2.0",
+  "view": {
+    "syntax_color": "#50fa7b",
+    "hint": "CREATE \"new-bucket\"; LB \".\"; PURGE_BUCKET \"old-bucket\";",
+    "description": "Core S3 Infrastructure Manager. Handles bucket provisioning, discovery listings, and forced removal (purge)."
+  },
+  "triggers": [
+    {
+      "group_name": "Provisioning",
+      "keywords": [
+        "CREATE", "Create", "create",
+        "CREATE_BUCKET", "Create_Bucket", "create_bucket",
+        "NEW_BUCKET", "New_Bucket", "new_bucket"
+      ],
+      "behavior_flags": { "mode": "create" }
+    },
+    {
+      "group_name": "Discovery",
+      "keywords": [
+        "LB", "Lb", "lb",
+        "LIST_BUCKETS", "List_Buckets", "list_buckets",
+        "DISCOVER", "Discover", "discover"
+      ],
+      "behavior_flags": { "mode": "list" }
+    },
+    {
+      "group_name": "Removal",
+      "keywords": [
+        "PURGE_BUCKET", "Purge_Bucket", "purge_bucket",
+        "REMOVE_BUCKET", "Remove_Bucket", "remove_bucket",
+        "DELETE_BUCKET", "Delete_Bucket", "delete_bucket"
+      ],
+      "behavior_flags": { "mode": "purge" }
+    }
+  ],
+  "behavior": {
+    "action_name": "bucket",
+    "supports_simulation": true,
+    "requires_dst": false,
+    "auto_relpath": false,
+    "allowed_protocols": ["SINGLE"],
+    "parser_method": "parse_unary"
+  },
+  "reporting": {
+    "exec_status": "PROCESSED",
+    "sim_status": "WILL PROCESS"
+  }
+}
