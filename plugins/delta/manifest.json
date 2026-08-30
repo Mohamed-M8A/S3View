@@ -1,0 +1,39 @@
+{
+  "view": {
+    "syntax_color": "#f39c12",
+    "hint": "DELTA (chunk: 16) \"C:/large_file.iso\" to \"s3://my-bucket/\" ;",
+    "description": "High-performance differential upload engine that uses S3 Multipart API to transfer only the modified segments of a file based on local hash registries."
+  },
+  "plugin_id": "delta_mod",
+  "version": "1.1.0",
+  "triggers": [
+    {
+      "group_name": "Differential Transfer",
+      "keywords": [
+        "DELTA",
+        "Delta",
+        "delta",
+        "PATCH",
+        "Patch",
+        "patch",
+        "DU",
+        "du"
+      ]
+    }
+  ],
+  "behavior": {
+    "action_name": "delta",
+    "supports_simulation": true,
+    "requires_dst": true,
+    "auto_relpath": true,
+    "allowed_protocols": [
+      "L2C"
+    ],
+    "parser_method": "parse_binary",
+    "dst_is_container": true
+  },
+  "reporting": {
+    "exec_status": "PATCHED",
+    "sim_status": "WILL PATCH"
+  }
+}
