@@ -1,0 +1,40 @@
+{
+  "view": {
+    "syntax_color": "#ff00ff",
+    "hint": "ZIP (level: 9) \"source_folder/\" to \"backup.zip\" ;",
+    "description": "Aggregates and compresses multiple files into a single ZIP archive with adjustable compression levels."
+  },
+  "plugin_id": "archive_mod",
+  "version": "1.3.0",
+  "triggers": [
+    {
+      "group_name": "Standard Zip",
+      "keywords": [
+        "ZIP",
+        "Zip",
+        "zip",
+        "ARCHIVE",
+        "Archive",
+        "archive",
+        "ARCH",
+        "arch"
+      ]
+    }
+  ],
+  "behavior": {
+    "action_name": "archive",
+    "supports_simulation": true,
+    "requires_dst": false,
+    "allowed_protocols": [
+      "S2S",
+      "S2L",
+      "L2S",
+      "L2L"
+    ],
+    "parser_method": "parse_flexible"
+  },
+  "reporting": {
+    "exec_status": "ARCHIVED",
+    "sim_status": "WILL ARCHIVE"
+  }
+}

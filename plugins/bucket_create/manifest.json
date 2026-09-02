@@ -1,0 +1,33 @@
+{
+  "plugin_id": "bucket_create_mod",
+  "version": "1.0.0",
+  "view": {
+    "syntax_color": "#50fa7b",
+    "hint": "CREATE \"new-bucket\";",
+    "description": "Provisions a new S3 bucket."
+  },
+  "triggers": [
+    {
+      "group_name": "Provisioning",
+      "keywords": [
+        "CREATE", "Create", "create",
+        "CREATE_BUCKET", "Create_Bucket", "create_bucket",
+        "NEW_BUCKET", "New_Bucket", "new_bucket"
+      ],
+      "behavior_flags": {}
+    }
+  ],
+  "behavior": {
+    "action_name": "bucket_create",
+    "supports_simulation": true,
+    "requires_dst": false,
+    "auto_relpath": false,
+    "allowed_protocols": ["SINGLE"],
+    "parser_method": "parse_bucket_name",
+    "requires_s3": true
+  },
+  "reporting": {
+    "exec_status": "CREATED",
+    "sim_status": "WILL CREATE"
+  }
+}
